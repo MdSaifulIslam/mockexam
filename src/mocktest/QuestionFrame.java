@@ -57,7 +57,7 @@ public class QuestionFrame extends JFrame {
         top.add(qArea, BorderLayout.SOUTH);
         for (int i = 0; i < 5; i++) {
             answer[i] = new JCheckBox();
-            answer[i].addItemListener(null);
+            answer[i].addItemListener(new ItemList());
             center.add(answer[i]);
             answer[i].setFont(new Font("Serieff", Font.PLAIN, 12));
         }
@@ -71,6 +71,7 @@ public class QuestionFrame extends JFrame {
         bottom.add(previous);
         bottom.add(grade);
         bottom.add(review);
+        bottom.add(timer);
         getContentPane().add(top, BorderLayout.NORTH);
         getContentPane().add(center, BorderLayout.CENTER);
         getContentPane().add(bottom, BorderLayout.SOUTH);
@@ -80,6 +81,8 @@ public class QuestionFrame extends JFrame {
         grade.addActionListener(new ActionList());
         review.addActionListener(new ActionList());
         setTitle("Java Mock Exam System");
+        Timer t= new Timer(this);
+        t.start();
 
     }
 
@@ -144,6 +147,7 @@ public class QuestionFrame extends JFrame {
                 makeQues(quesNo);
             }
             if (e.getSource() == grade) {
+                new ExamResult(MockTest.fm);
             }
             if (e.getSource() == review) {
             }
@@ -170,9 +174,13 @@ public class QuestionFrame extends JFrame {
                 }
 
             }
-            
-            if (jc==mark) {
-                
+
+            if (jc == mark) {
+                if (e.getStateChange() == 1) {
+                    ansOption[quesNo - 1][5] = true;
+                } else {
+                    ansOption[quesNo - 1][5] = false;
+                }
             }
         }
     }
