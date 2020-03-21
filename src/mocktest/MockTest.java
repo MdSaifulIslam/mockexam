@@ -52,7 +52,7 @@ public class MockTest {
                 final JButton b2= new JButton("cancel");
                 b1.addActionListener(new ActionListener() {
                     @Override
-                    publiyc void actionPerformed(ActionEvent ae) {
+                    public void actionPerformed(ActionEvent ae) {
                         System.exit(1);
                     }
                 });
