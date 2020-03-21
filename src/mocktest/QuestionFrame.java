@@ -80,6 +80,7 @@ public class QuestionFrame extends JFrame {
         previous.addActionListener(new ActionList());
         grade.addActionListener(new ActionList());
         review.addActionListener(new ActionList());
+        mark.addActionListener(new ActionList());
         setTitle("Java Mock Exam System");
         Timer t= new Timer(this);
         t.start();
@@ -150,6 +151,7 @@ public class QuestionFrame extends JFrame {
                 new ExamResult(MockTest.fm);
             }
             if (e.getSource() == review) {
+                new Review(MockTest.fm);
             }
 
         }

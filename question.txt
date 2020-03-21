@@ -369,25 +369,6 @@ unknown
 3
 
 ##---------question----------##
-what is correct 19
-	please select one
-
-##ans1##
-nothing
-##ans2##
-simple
-##ans3##
-not simple
-##ans3##
-all
-##ans4##
-unknown
-##ans5##
-
-##correct##
-3
-
-##---------question----------##
 what is correct 20
 	please select one
 
@@ -758,6 +739,25 @@ unknown
 
 ##---------question----------##
 what is correct 39
+	please select one
+
+##ans1##
+nothing
+##ans2##
+simple
+##ans3##
+not simple
+##ans3##
+all
+##ans4##
+unknown
+##ans5##
+
+##correct##
+3
+
+##---------question----------##
+what is correct 40
 	please select one
 
 ##ans1##
