@@ -30,9 +30,9 @@ public class ExamResult extends JDialog {
         totAns = new JLabel("Correct Answer");
         totWrong = new JLabel("incurrect answer");
         per = new JLabel("Persentage of marks");
-        totQues = new JLabel("Grade");
+        grade = new JLabel("Grade");
         jb = new JButton("ok end test");
-        setTitle("Exam result");
+        setTitle("Exam Result");
         setModal(true);
         for (int i = 0; i < fm.maxQue; i++) {
             StringBuffer s = new StringBuffer();
@@ -59,9 +59,9 @@ public class ExamResult extends JDialog {
         con.add(totWrong);
         con.add(new JLabel(""+(fm.maxQue-correct)+""));
         con.add(per);
-        con.add(new JLabel(""+(fm.maxQue-correct)+""));
         int b= correct*100/fm.maxQue;
         con.add(new JLabel(b+"%"));
+        con.add(grade);
         if(b<71){
             con.add(new JLabel("Failed"));
         }else{

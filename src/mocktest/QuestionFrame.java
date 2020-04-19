@@ -49,7 +49,6 @@ public class QuestionFrame extends JFrame {
         top = new JPanel();
         center = new JPanel();
         bottom = new JPanel();
-        center.setFont(new Font("Serieff", Font.PLAIN, 12));
         center.setLayout(new GridLayout(5, 1));
         top.setLayout(new BorderLayout());
         top.add(queNo, BorderLayout.WEST);
@@ -80,7 +79,7 @@ public class QuestionFrame extends JFrame {
         previous.addActionListener(new ActionList());
         grade.addActionListener(new ActionList());
         review.addActionListener(new ActionList());
-        mark.addActionListener(new ActionList());
+        mark.addItemListener(new ItemList());
         setTitle("Java Mock Exam System");
         Timer t= new Timer(this);
         t.start();

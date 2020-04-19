@@ -45,9 +45,8 @@ public class MockTest {
             public void windowClosing(WindowEvent we) {
                 final  JDialog jd = new JDialog();
                 jd.setModal(true);
-                jd.setTitle("Mock Exam");
-                JLabel msg;
-                msg = new JLabel("Do you want to exit", JLabel.CENTER);
+                jd.setTitle("Java Mock Exam System");
+                JLabel msg = new JLabel("Do you want to exit", JLabel.CENTER);
                 final JButton b1= new JButton("ok");
                 final JButton b2= new JButton("cancel");
                 b1.addActionListener(new ActionListener() {
